@@ -9,7 +9,7 @@ This document provides a comprehensive technical overview of the architecture, d
 The portfolio is a lightweight, responsive, single-page application built for **Dharmesh Patel** (Senior Full-Stack Engineer & Team Lead).
 
 ### Key Architectural Characteristics
-- **Decoupled Content Architecture**: All dynamic resume data (profile info, skill categories, work history, and industry domain project initiatives) is maintained in static JSON files under `public/data/` rather than hardcoded into React components.
+- **Decoupled Content Architecture**: All dynamic resume data (profile info, skills matrix, career timeline, and domain-driven portfolio initiatives) is maintained in static JSON files under `public/data/` rather than hardcoded into React components.
 - **Zero-Rebuild Content Updates**: Because content is fetched at runtime by the browser, updating resume text on production hosting (e.g. AWS S3) does not require rebuilding or redeploying the JavaScript bundle.
 - **Cache Invalidation on Static Hosting**: JSON requests include a dynamic timestamp parameter (`?v=<timestamp>`) ensuring that visitors always receive fresh data without CDN/browser cache delays.
 
@@ -31,7 +31,7 @@ The portfolio is a lightweight, responsive, single-page application built for **
 
 ```text
 portfolio/
-├── .gitignore                    # Git ignored files (node_modules, projects, .agent)
+├── .gitignore                    # Git ignored files (node_modules, projects, .agent, dist)
 ├── document/
 │   └── architecture_and_flow.md  # Comprehensive architecture & flow documentation
 ├── index.html                    # Root HTML document, meta tags & Google Fonts CDN
@@ -43,8 +43,8 @@ portfolio/
 ├── public/
 │   └── data/
 │       ├── profile.json          # Personal information, title, location, contacts, bio
-│       ├── skills.json           # Categorized skill tags (Frontend, Backend, Cloud, etc.)
-│       ├── experience.json       # 5-stage career history with roles, companies, bullets
+│       ├── skills.json           # Categorized skill tags (AI Governance, Frontend, Backend, etc.)
+│       ├── experience.json       # Career history with roles, companies, bullets
 │       └── portfolio.json        # Domain-categorized initiatives, integrations, and projects
 └── src/
     ├── main.tsx                  # React DOM root entry point
@@ -91,119 +91,32 @@ flowchart TD
     end
 ```
 
-### Flow Walkthrough
+---
 
-1. **Bootstrap (`index.html` -> `main.tsx`)**:
-   - `index.html` loads the required web fonts and defines `<div id="root"></div>`.
-   - `main.tsx` mounts the root React component `<App />`.
+## 5. Domain Specializations (`portfolio.json`)
 
-2. **Data Ingestion (`usePortfolioData.ts`)**:
-   - On component mount (`useEffect`), the hook runs `Promise.all` fetching the 4 JSON endpoints simultaneously: `profile.json`, `skills.json`, `experience.json`, and `portfolio.json`.
-   - Appends `?v=${Date.now()}` to bypass HTTP caches.
-   - Includes a cleanup flag (`cancelled = true`) to prevent memory leaks and state updates if unmounted before completion.
-
-3. **State Rendering (`App.tsx`)**:
-   - **Loading State**: Displays loading indicator with the animated ambient background.
-   - **Error State**: Displays descriptive error feedback if any JSON file fails to load or parse.
-   - **Success State**: Passes loaded data objects down to the respective layout components.
+The portfolio is structured into 8 distinct industry domains:
+1. **Enterprise AI Governance, LLM Firewalls & Agentic Workspaces**:
+   - High-Performance AI Governance Middleware & Security Firewall (8-layer pipeline, PII/NER redaction, multi-LLM routing, SHA256 audit logs).
+   - Institutional GenAI SaaS Workspace & Multi-Tenant Control Plane (Master/Tenant DB isolation, 12-step automated onboarding, 120+ REST APIs, Redis caching).
+2. **Digital Out-of-Home (DOOH) & Smart Kiosk Infrastructure**:
+   - Multi-Tenant DOOH Advertising & Display Kiosk Backend (Sequelize master/tenant migrations, sub-millisecond campaign delivery).
+3. **Fintech, NBFC & Digital Banking**:
+   - Enterprise Salary Advance Platform, SME Working Capital Solution, Multi-Tenant Retail Brand Settlement Hub.
+4. **Regulated Logistics & Delivery Management**:
+   - Regulated Delivery Logistics & Compliant Inventory Platform (White-label PWA & Elasticsearch).
+5. **Automotive Dealership & Digital Solutions**:
+   - Automotive Dealership Inventory & SEO Marketing Suite, Digital Automotive Marketplace.
+6. **E-Commerce, Custom Portals & MLM Systems**:
+   - Custom Apparel Commerce & Multi-Tier Stylist MLM Engine, Multi-Vendor Marketplace.
+7. **Crowdfunding & Donation Platforms**:
+   - Global Crowdfunding & Multi-Tier Donor Pledge Engine.
+8. **Sports Tech, Social Communities & Streaming**:
+   - Real-Time Multi-League Sports Prediction Platform, Live Video Streaming & Community Marketing, Smart Co-Working Space Booking.
 
 ---
 
-## 5. UI Components Breakdown
-
-### 1. `AmbientBackground`
-- Fixed backdrop with dark background (`bg-slate-950`).
-- Generates a subtle cyber-grid pattern (`bg-cyber-grid`) with radial opacity masking.
-- Multi-layer blurred ambient glow orbs in Indigo and Sky blue (`blur-[120px]`).
-
-### 2. `Header`
-- Sticky top navigation bar with translucent blur effect (`backdrop-blur-xl`).
-- Dynamic pulsing availability status badge (emerald beacon).
-- Navigation anchors (`#portfolio`, `#stack`, `#timeline`, `#contact`) and direct quick-contact phone button.
-
-### 3. `Hero`
-- Location indicator badge, bold display heading, and career summary excerpt.
-- Email and phone action badges with hover animations.
-- **Terminal Status Readout (`status.sh`)**: Interactive mock terminal card showing `$ whoami`, `$ uptime`, and `$ status` with a blinking cursor.
-
-### 4. `PortfolioSection`
-- **Domain Filter Tabs**: Interactive selector across 6 industry domains (Fintech & Banking, Logistics & Cannabis, Automotive, E-Commerce, Crowdfunding, Sports Tech).
-- **Specialization Banner**: Displays domain tagline, key initiative count, and engineering scope summary.
-- **Project Cards**: Rich cards with title, company, duration, role, full description, architecture highlights, tech stack tags, and specialized **APIs & Integrations** badges (e.g. Kotak API, Equifax/Experian, Elasticsearch, Razorpay, QuickBooks, Authorize.Net).
-
-### 5. `SkillsMatrix`
-- Dynamic category tab selector derived from the keys of `skills.json`.
-- Grid of interactive technology badges with hover translation and glow accents.
-
-### 6. `ExperienceTimeline`
-- Vertical timeline with continuous gradient connector line.
-- Glowing timeline nodes marking each milestone across all 5 career positions.
-- Cards detailing role title, company name, location, dates, and bullet achievements.
-
-### 7. `Footer`
-- High-contrast direct email callout and copyright notice with dynamic year calculation.
-
----
-
-## 6. Data Models & JSON Schema
-
-All TypeScript types are declared in `src/types.ts`:
-
-### Profile (`public/data/profile.json`)
-```typescript
-export interface Profile {
-  name: string;
-  title: string;
-  location: string;
-  mobile: string;
-  email: string[];
-  summary: string;
-}
-```
-
-### Portfolio Projects & Domains (`public/data/portfolio.json`)
-```typescript
-export interface ProjectItem {
-  name: string;
-  company?: string;
-  duration?: string;
-  role?: string;
-  description: string;
-  technologies: string[];
-  integrations?: string[];
-  highlights?: string[];
-  link?: string;
-}
-
-export interface DomainSection {
-  id: string;
-  domain: string;
-  icon?: string;
-  tagline: string;
-  summary: string;
-  featuredProjects: ProjectItem[];
-}
-```
-
-### Skills Matrix (`public/data/skills.json`)
-```typescript
-export type SkillMatrix = Record<string, string[]>;
-```
-
-### Experience (`public/data/experience.json`)
-```typescript
-export interface ExperienceEntry {
-  role: string;
-  company: string;
-  location: string;
-  period: string;
-  bullets: string[];
-}
-```
-
----
-
-## 7. Build & Deployment Guidelines
+## 6. Build & Deployment Guidelines
 
 ### Local Development
 ```bash

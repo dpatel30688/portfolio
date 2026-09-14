@@ -1,5 +1,67 @@
 [
   {
+    "id": "ai-governance-workspaces",
+    "domain": "Enterprise AI Governance, LLM Firewalls & Agentic Workspaces",
+    "icon": "shield-check",
+    "tagline": "AI middleware firewalls, dynamic multi-LLM routing & multi-tenant GenAI workspaces",
+    "summary": "Architected production-ready enterprise AI governance middleware and multi-tenant SaaS control planes enabling institutions to deploy secure, compliant, and cost-optimized GenAI workspaces with real-time prompt interception, PII redaction, and deterministic policy enforcement.",
+    "featuredProjects": [
+      {
+        "name": "High-Performance AI Governance Middleware & Security Firewall",
+        "company": "Freelance / Enterprise AI Solution",
+        "duration": "2025 – 2026",
+        "role": "Lead AI & Backend Systems Architect",
+        "description": "Production-ready AI governance decision engine and middleware intercepting 100% of user prompts before reaching LLM providers, enforcing deterministic compliance policies, automated PII masking, and cost-optimized model routing.",
+        "technologies": ["Python 3.11", "FastAPI (Async)", "PostgreSQL", "SQLAlchemy (Async)", "Redis", "spaCy NER", "Docker", "Ollama"],
+        "integrations": ["OpenAI GPT-4o", "Anthropic Claude 3.5", "Google Gemini Pro", "Ollama Local Models", "Redis Rate Limiting & Token Budgeting", "spaCy Named Entity Recognition", "SHA-256 Audit Logger"],
+        "highlights": [
+          "Engineered 8-layer modular governance pipeline: Context Resolver, PII Detector, Deterministic Policy Engine, PolicyLLM Intent Classifier, Decision Engine, Enforcement, and SHA256 Audit Log",
+          "Implemented dynamic multi-model routing (cloud vs. local Ollama), slashing LLM inference compute costs by up to 90%",
+          "Built hybrid regex + spaCy NER pipeline for real-time redaction of sensitive PII (emails, SSNs, IDs, financial data) in prompts and model outputs",
+          "Enforced deterministic policy precedence with granular action enforcement: ALLOW, TRANSFORM, BLOCK, WARN, and ESCALATE"
+        ]
+      },
+      {
+        "name": "Institutional GenAI SaaS Workspace & Multi-Tenant Control Plane",
+        "company": "Freelance / Enterprise Education SaaS",
+        "duration": "2025 – 2026",
+        "role": "Lead Full-Stack & Solutions Architect",
+        "description": "3-tier institutional AI operating system and SaaS control plane featuring 21 integrated productivity tools, master administrative control plane, and physically isolated tenant databases for compliant GenAI workspaces.",
+        "technologies": ["React JS", "TypeScript", "Vite", "Tailwind CSS", "Node.js", "Python FastAPI", "PostgreSQL", "Redis", "Docker"],
+        "integrations": ["Multi-Tenant Master/Tenant DB Isolation", "12-Step Automated Onboarding Wizard", "Redis High-Speed Caching", "FERPA & GDPR Compliance Guardrails", "Webhook Event Pipeline"],
+        "highlights": [
+          "Architected hybrid multi-tenant database system featuring a master control plane DB and physically isolated institutional tenant databases",
+          "Engineered 12-step automated institutional onboarding wizard covering domain validation, SSO/MFA configuration, and tenant database lifecycle automation",
+          "Integrated Redis caching layer achieving 85%+ cache hit rate, reducing cached response times to 50–150ms and cutting database load by 70%",
+          "Implemented automated compliance engines adhering to FERPA physical isolation, GDPR data sovereignty, and SOC 2 Type II audit logging"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "dooh-kiosk-systems",
+    "domain": "Digital Out-of-Home (DOOH) & Smart Kiosk Infrastructure",
+    "icon": "monitor",
+    "tagline": "Multi-tenant digital signage, high-throughput campaign scheduling & device telemetry",
+    "summary": "Engineered high-throughput, multi-tenant digital out-of-home advertising platforms managing real-time media scheduling, playback telemetry, and tenant-isolated campaign delivery across physical kiosk display networks.",
+    "featuredProjects": [
+      {
+        "name": "Multi-Tenant DOOH Advertising & Display Kiosk Backend",
+        "company": "Freelance / Smart Media Client",
+        "duration": "2024 – 2025",
+        "role": "Senior Backend Architect",
+        "description": "Scalable multi-tenant digital signage backend engine managing ad campaign scheduling, tenant-isolated media delivery to physical display kiosks, and real-time playback telemetry.",
+        "technologies": ["Node.js", "Express.js", "Sequelize ORM", "PostgreSQL", "Redis", "Docker", "JWT", "Jest"],
+        "integrations": ["Multi-Tenant Dual Migrations (Master/Tenant)", "Redis In-Memory Queues & Caching", "Kiosk Playback Telemetry Engine"],
+        "highlights": [
+          "Architected multi-tenant database schema with decoupled master control plane and tenant-specific database migration workflows using Sequelize CLI",
+          "Engineered sub-millisecond campaign schedule retrieval and media asset delivery pipelines powered by Redis caching",
+          "Built automated database seeding, health check endpoints, and robust JWT-based tenant authentication"
+        ]
+      }
+    ]
+  },
+  {
     "id": "fintech-nbfc",
     "domain": "Fintech, NBFC & Digital Banking",
     "icon": "bank",

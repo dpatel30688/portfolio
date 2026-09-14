@@ -1,6 +1,57 @@
 {
-  "Frontend Technologies": ["AngularJS", "React JS", "TypeScript", "Redux", "Recoil", "React Native", "PWA (Context API)", "JavaScript", "HTML5", "CSS3", "SCSS", "Tailwind CSS", "Livewire"],
-  "Backend Ecosystems": ["PHP", "Laravel", "Node.js", "CodeIgniter", "RESTful APIs", "SOAP Web Services", "WordPress"],
-  "Databases & Search": ["MySQL", "PostgreSQL", "Elasticsearch", "SQL Server", "Oracle 9i"],
-  "Cloud & DevOps": ["AWS (EC2, S3, RDS, IAM)", "Git", "Nginx"]
+  "AI Governance & LLM Engineering": [
+    "Python 3.11",
+    "FastAPI (Async)",
+    "Multi-LLM Dynamic Routing",
+    "AI Safety & Governance Middleware",
+    "Prompt Injection & PII Redaction",
+    "spaCy NER",
+    "OpenAI GPT-4o / Claude 3.5 / Gemini",
+    "Ollama (Local Models)",
+    "Multi-Tenant Database Architecture",
+    "Redis Caching & Token Budgeting"
+  ],
+  "Frontend Technologies": [
+    "React JS",
+    "TypeScript",
+    "AngularJS",
+    "Redux",
+    "Recoil",
+    "React Native",
+    "PWA (Context API)",
+    "JavaScript",
+    "HTML5",
+    "CSS3",
+    "SCSS",
+    "Tailwind CSS",
+    "Livewire"
+  ],
+  "Backend Ecosystems": [
+    "PHP",
+    "Laravel",
+    "Node.js",
+    "Express.js",
+    "FastAPI",
+    "CodeIgniter",
+    "Sequelize ORM",
+    "SQLAlchemy (Async)",
+    "RESTful APIs",
+    "SOAP Web Services",
+    "WordPress"
+  ],
+  "Databases & Caching": [
+    "PostgreSQL",
+    "Redis",
+    "MySQL",
+    "Elasticsearch",
+    "SQL Server",
+    "Oracle 9i"
+  ],
+  "Cloud & DevOps": [
+    "Docker & Docker Compose",
+    "AWS (EC2, S3, RDS, IAM)",
+    "Nginx",
+    "Git / GitHub / Bitbucket",
+    "CI/CD Pipelines"
+  ]
 }
