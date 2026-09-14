@@ -15,12 +15,59 @@
     "role": "Sr. Software Developer / Team Leader",
     "company": "Atyantik Technologies Pvt. Ltd.",
     "location": "Vadodara, India",
-    "period": "Dec 2020 – Previous",
+    "period": "Dec 2020 – Oct 2025",
     "bullets": [
       "Led, mentored, and guided a high-performing team of 6 engineers across product and service-based development cycles.",
       "Architected and optimized complex systems using React JS, TypeScript, Laravel, MySQL, and WordPress.",
       "Key Project – Inventory Management Platform: Architected a compliant delivery management system for the cannabis industry. Built a white-label e-commerce mobile app, integrated React PWA, and optimized data search with Elasticsearch.",
       "Key Project – Automotive Dealer IMS: Engineered scalable digital marketing and website infrastructure using Recoil, SCSS, and Node.js to enhance discoverability and system efficiency."
+    ]
+  },
+  {
+    "role": "Sr. Web Developer (Remote)",
+    "company": "Hospitality Finance Company India PL { NBFC }",
+    "location": "Bangalore, India (Remote)",
+    "period": "Jan 2017 – Nov 2020",
+    "bullets": [
+      "Engineered 'SalaryBridge' on-demand salary advance ecosystem enabling instant automated bank disbursements via Kotak Payment API upon HR approval.",
+      "Integrated Equifax and Experian credit score APIs for instant user creditworthiness assessment and risk profiling.",
+      "Architected HFCI Overdraft digital banking platform using React Native, PHP CodeIgniter, REST APIs, and Kotak Virtual Accounts for corporate working capital finance.",
+      "Built 'HFCI StoreFront' retail settlement hub for global luxury brands (Calvin Klein & Tommy Hilfiger) managing 3 distinct operational portals, Happay Card APIs, and QuickBooks ledger synchronization."
+    ]
+  },
+  {
+    "role": "Sr. Web Developer (Remote)",
+    "company": "Luregalore",
+    "location": "Mumbai, India (Remote)",
+    "period": "Dec 2015 – Jan 2017",
+    "bullets": [
+      "Developed 'WeCreate / Lure Galore' co-working space booking engine with automated seat reservation calendars, Razorpay payment gateway, and digital wallet integration.",
+      "Built 'Availup' buy-and-sell service platform with secure REST API architectures and seamless payment processing.",
+      "Engineered reusable JavaScript libraries, interactive frontend interfaces, and managed distributed version control workflows via Git & Bitbucket."
+    ]
+  },
+  {
+    "role": "Sr. Web Developer",
+    "company": "Spaculus Software PVT. LTD",
+    "location": "Vadodara, Gujarat, India",
+    "period": "Aug 2013 – Dec 2015",
+    "bullets": [
+      "Engineered 'PlaynBrag.com' 7-game sports betting platform (including NHL leagues) with custom league creation and third-party sports data feed API synchronization.",
+      "Developed 'Wonderland' social community with real-time live video streaming and PayPal PHP SDK integration.",
+      "Built 'Beckenham.net' multi-tenant portal integrating social community feeds, Yellow Pages business marketing directory, and paid event ticketing.",
+      "Architected 'DAnsley.com' bespoke menswear e-commerce with dual Customer & Stylist portals, Multi-Level Marketing (MLM) commission engines, and Authorize.Net payment processing.",
+      "Designed Ajax-based administrative panels, configured production Nginx web servers, and integrated international gateways (Amazon, PayPal, Australian gateways)."
+    ]
+  },
+  {
+    "role": "Jr. Web Developer",
+    "company": "Rockers Technologies",
+    "location": "Vadodara, Gujarat, India",
+    "period": "Mar 2012 – Aug 2013",
+    "bullets": [
+      "Developed full-stack crowdfunding and campaign donation platforms (Inyourcorner.com, Indiegogoclone.com, ifundto.ca, kickstarterclone.com, zzme.cn, trinitotrini.com, 234give.com).",
+      "Converted PSD design mockups into pixel-perfect, responsive HTML5/CSS3 layouts with interactive jQuery animations and effects.",
+      "Implemented multi-gateway payment processing, reward pledge tiers, and custom campaign management modules in PHP CodeIgniter."
     ]
   }
 ]

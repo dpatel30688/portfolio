@@ -17,11 +17,12 @@ for ultra-low-cost static hosting on AWS S3. All resume content lives in
 │   └── data/
 │       ├── profile.json      # name, title, contact, summary
 │       ├── skills.json       # { "Category Name": ["Skill", ...] }
-│       └── experience.json   # [{ role, company, location, period, bullets[] }]
+│       ├── experience.json   # [{ role, company, location, period, bullets[] }]
+│       └── portfolio.json    # [{ id, domain, tagline, summary, featuredProjects[] }]
 └── src/
     ├── main.tsx
-    ├── App.tsx               # header, hero, skills matrix, timeline, footer
-    ├── types.ts              # Profile / SkillMatrix / ExperienceEntry types
+    ├── App.tsx               # header, hero, portfolio domains, skills matrix, timeline, footer
+    ├── types.ts              # Profile / SkillMatrix / ExperienceEntry / DomainSection types
     ├── usePortfolioData.ts   # Promise.all fetch + cache-buster hook
     └── index.css
 ```
@@ -36,6 +37,7 @@ the same shape:
 - `skills.json`: an object where each key is a category label and each value
   is an array of skill strings
 - `experience.json`: an array of `{ role, company, location, period, bullets }`
+- `portfolio.json`: an array of domain objects containing `id`, `domain`, `tagline`, `summary`, and `featuredProjects` (with `technologies`, `integrations`, `highlights`)
 
 ## Local development
 

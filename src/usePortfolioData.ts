@@ -8,7 +8,7 @@ interface FetchState {
 }
 
 /**
- * Fetches the three section-wise JSON files concurrently (no waterfall) from
+ * Fetches the section-wise JSON files concurrently (no waterfall) from
  * /data/*.json. Every request carries a `?v=<timestamp>` cache-buster so a
  * fresh upload to the S3 bucket is visible to visitors immediately, without
  * waiting on browser or CDN cache TTLs.
@@ -35,10 +35,15 @@ export function usePortfolioData(): FetchState {
       fetchJson<PortfolioData["profile"]>("profile.json"),
       fetchJson<PortfolioData["skills"]>("skills.json"),
       fetchJson<PortfolioData["experience"]>("experience.json"),
+      fetchJson<PortfolioData["portfolioProjects"]>("portfolio.json"),
     ])
-      .then(([profile, skills, experience]) => {
+      .then(([profile, skills, experience, portfolioProjects]) => {
         if (cancelled) return;
-        setState({ data: { profile, skills, experience }, loading: false, error: null });
+        setState({
+          data: { profile, skills, experience, portfolioProjects },
+          loading: false,
+          error: null,
+        });
       })
       .catch((err: Error) => {
         if (cancelled) return;

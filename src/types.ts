@@ -18,8 +18,30 @@ export interface ExperienceEntry {
   bullets: string[];
 }
 
+export interface ProjectItem {
+  name: string;
+  company?: string;
+  duration?: string;
+  role?: string;
+  description: string;
+  technologies: string[];
+  integrations?: string[];
+  highlights?: string[];
+  link?: string;
+}
+
+export interface DomainSection {
+  id: string;
+  domain: string;
+  icon?: string;
+  tagline: string;
+  summary: string;
+  featuredProjects: ProjectItem[];
+}
+
 export interface PortfolioData {
   profile: Profile;
   skills: SkillMatrix;
   experience: ExperienceEntry[];
+  portfolioProjects: DomainSection[];
 }

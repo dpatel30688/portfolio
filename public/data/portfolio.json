@@ -1,0 +1,217 @@
+[
+  {
+    "id": "fintech-nbfc",
+    "domain": "Fintech, NBFC & Digital Banking",
+    "icon": "bank",
+    "tagline": "Instant salary disbursement, vendor financing & multi-tenant settlement platforms",
+    "summary": "Engineered enterprise-grade financial systems incorporating real-time banking APIs, virtual accounts, credit scoring bureau integrations, and automated reconciliation for major retail brands and lending institutions.",
+    "featuredProjects": [
+      {
+        "name": "Enterprise Salary Advance & Early Wage Access Platform",
+        "company": "Hospitality Finance Company India PL",
+        "duration": "6 Months",
+        "role": "Lead Full-Stack Developer",
+        "description": "On-demand salary advance ecosystem enabling employees to request earned salary early with instant bank disbursements upon HR approval. Developed web backends and APIs powering iOS and Android client applications.",
+        "technologies": ["PHP CodeIgniter", "MySQL", "REST API", "jQuery", "Android/iOS APIs"],
+        "integrations": ["Kotak Payment API", "Experian Credit Score", "Equifax Bureau API", "QuickBooks"],
+        "highlights": [
+          "Instant automated loan disbursement direct to beneficiary bank accounts via Kotak API",
+          "Automated creditworthiness verification using Experian & Equifax credit bureau endpoints",
+          "Real-time payroll deduction accounting integration with QuickBooks"
+        ]
+      },
+      {
+        "name": "Digital SME Working Capital & Overdraft Banking Solution",
+        "company": "Hospitality Finance Company India PL",
+        "duration": "1 Month",
+        "role": "Full-Stack & Mobile Developer",
+        "description": "Digital lending application providing corporate working capital and vendor financing products directly at businesses' fingertips with seamless mobile application onboarding.",
+        "technologies": ["React Native", "PHP CodeIgniter", "MySQL", "REST API", "jQuery"],
+        "integrations": ["Kotak Payment API", "Kotak Virtual Accounts", "Equifax Credit Score", "QuickBooks"],
+        "highlights": [
+          "End-to-end digital loan lifecycle from identity verification to tranche disbursement",
+          "Virtual account allocation for streamlined repayment tracking and automated ledger settlement"
+        ]
+      },
+      {
+        "name": "Multi-Tenant Enterprise Retail Settlement & Escrow Hub",
+        "company": "Hospitality Finance Company India PL",
+        "duration": "1 Month",
+        "role": "Senior Web Developer",
+        "description": "Multi-tier retail brand management and settlement platform managing collections and vendor payouts for premium fashion outlets across three synchronized portals (Store, Brand, and Super Admin).",
+        "technologies": ["PHP CodeIgniter", "MySQL", "REST API", "jQuery"],
+        "integrations": ["Kotak Payment API", "Kotak Virtual Accounts", "Happay Card API", "QuickBooks"],
+        "highlights": [
+          "Automated daily sales collection aggregation directly into central escrow banking infrastructure",
+          "Corporate prepaid card management via Happay Card API for in-store operational expenses"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "logistics-cannabis",
+    "domain": "Regulated Logistics & Delivery Management",
+    "icon": "truck",
+    "tagline": "End-to-end compliant inventory, dispatch tracking & white-label e-commerce",
+    "summary": "Architected all-in-one compliance platforms for regulated industries featuring real-time driver dispatching, track-and-trace inventory control, digital loyalty mechanisms, and white-label consumer web/PWA storefronts.",
+    "featuredProjects": [
+      {
+        "name": "Regulated Delivery Logistics & Compliant Inventory Platform",
+        "company": "Atyantik Technologies Pvt. Ltd.",
+        "duration": "3 Years",
+        "role": "Team Leader & Architect",
+        "description": "Mission-critical, compliance-driven delivery management and inventory platform tailored for regulated industries, featuring a white-label e-commerce mobile PWA and high-speed catalog discovery.",
+        "technologies": ["React PWA", "Context API", "Elasticsearch", "Laravel", "CodeIgniter", "MySQL", "REST API"],
+        "integrations": ["Elasticsearch", "Digital Loyalty Engine", "Driver Dispatch & GPS Tracking"],
+        "highlights": [
+          "Led a dedicated team of 6 engineers guiding code reviews, architecture, and feature delivery",
+          "Engineered white-label progressive web apps (PWA) allowing businesses to deploy branded ordering apps instantly",
+          "Integrated Elasticsearch for sub-millisecond multi-attribute product search and compliance filtering"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "automotive-digital",
+    "domain": "Automotive Dealership & Digital Solutions",
+    "icon": "car",
+    "tagline": "High-performance dealership inventory, faceted search & marketing pipelines",
+    "summary": "Built comprehensive digital marketing and website solutions for automotive dealerships, optimizing vehicle inventory discovery, organic search performance, and customer lead generation.",
+    "featuredProjects": [
+      {
+        "name": "Automotive Dealership Inventory & SEO Marketing Suite",
+        "company": "Atyantik Technologies Pvt. Ltd.",
+        "duration": "2 Years (Ongoing)",
+        "role": "Team Leader / Senior Developer",
+        "description": "Scalable dealership inventory showcase and digital marketing platform featuring granular vehicle filtering, automated inventory syndication, and SEO-optimized showroom frontends.",
+        "technologies": ["React JS", "TypeScript", "Recoil", "SCSS", "Node.js", "Laravel", "Elasticsearch", "WordPress", "MySQL"],
+        "integrations": ["Elasticsearch", "WordPress REST API", "SEO Optimization Engine"],
+        "highlights": [
+          "Architected state management and responsive UI components using React, TypeScript, and Recoil",
+          "Accelerated vehicle lookup across large multi-dealer inventories with Elasticsearch cluster queries",
+          "Spearheaded support resolution, ticket debugging, and core web vital speed optimizations"
+        ]
+      },
+      {
+        "name": "Digital Automotive Marketplace & Lead Management Portal",
+        "company": "Spaculus Software PVT. LTD",
+        "duration": "1 Month",
+        "role": "Web Developer",
+        "description": "Online automotive marketplace facilitating buying and selling of new and certified pre-owned vehicles with comprehensive vehicle specification sheets and inquiry routing.",
+        "technologies": ["PHP CodeIgniter", "MySQL", "jQuery", "HTML/CSS"],
+        "integrations": ["Vehicle Spec Directory", "Lead Notification System"],
+        "highlights": [
+          "Dynamic vehicle listing creation with structured photo gallery and specification breakdowns",
+          "Buyer inquiry matching and seller lead management workflow"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ecommerce-portals",
+    "domain": "E-Commerce, Custom Portals & MLM Systems",
+    "icon": "shopping-bag",
+    "tagline": "Multi-portal e-commerce, commission distribution & global payment processing",
+    "summary": "Developed specialized multi-portal commerce platforms supporting custom product builders, hierarchical stylist commission models (MLM), and international payment gateway integrations.",
+    "featuredProjects": [
+      {
+        "name": "Custom Apparel Commerce & Multi-Tier Stylist MLM Engine",
+        "company": "Spaculus Software PVT. LTD",
+        "duration": "3 Months",
+        "role": "Senior Web Developer",
+        "description": "Custom bespoke apparel commerce platform featuring independent portals for Customers and Stylists, backed by a hierarchical Multi-Level Marketing (MLM) commission calculation engine.",
+        "technologies": ["PHP CodeIgniter", "MySQL", "jQuery", "REST API", "SOAP"],
+        "integrations": ["Authorize.Net Gateway", "iOS/iPad Web Services", "MLM Commission Engine"],
+        "highlights": [
+          "Engineered multi-level commission calculation and payout ledger among registered fashion stylists",
+          "Developed backend web services consumable by native iOS and iPad stylist consultation apps",
+          "Integrated Authorize.Net for recurring and one-time secure credit card transactions"
+        ]
+      },
+      {
+        "name": "Multi-Vendor Marketplace & Secure Checkout Engine",
+        "company": "Luregalore & Spaculus",
+        "duration": "3 Months",
+        "role": "Web Developer",
+        "description": "E-commerce and service marketplace platforms supporting digital product transactions, buyer-seller messaging, and international checkout flows.",
+        "technologies": ["PHP CodeIgniter", "MySQL", "jQuery", "REST API"],
+        "integrations": ["Razorpay Payment Gateway", "PayPal Express Checkout", "PayPal PHP SDK"],
+        "highlights": [
+          "Integrated Razorpay and PayPal SDKs for frictionless zero-dropoff checkout experiences",
+          "Implemented responsive, cross-browser product catalogues with instantaneous cart updates"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "crowdfunding-nonprofit",
+    "domain": "Crowdfunding & Donation Platforms",
+    "icon": "heart-handshake",
+    "tagline": "High-volume fundraising, project backer tiers & international payment gateways",
+    "summary": "Built versatile crowdfunding and donor management platforms inspired by Kickstarter and Indiegogo, enabling individuals and organizations to launch campaigns, raise capital, and manage backer pledges globally.",
+    "featuredProjects": [
+      {
+        "name": "Global Crowdfunding & Multi-Tier Donor Pledge Engine",
+        "company": "Rockers Technologies",
+        "duration": "1 Year",
+        "role": "Web Developer",
+        "description": "Developed a series of comprehensive campaign fundraising platforms featuring categorized campaign directories, reward pledge tiers, and multi-gateway processing for international backers.",
+        "technologies": ["PHP CodeIgniter", "MySQL", "jQuery", "HTML5/CSS3", "JavaScript"],
+        "integrations": ["PayPal Payment Gateway", "Multi-Currency Payment Gateways", "Social Sharing APIs"],
+        "highlights": [
+          "Architected flexible reward tier and pledge tracking logic supporting fixed and flexible funding goals",
+          "Deployed responsive campaign landing pages optimized for donor conversion and social reach",
+          "Engineered multi-currency payment checkout pipelines for international campaign backers"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sports-social-media",
+    "domain": "Sports Tech, Social Communities & Streaming",
+    "icon": "activity",
+    "tagline": "Real-time sports betting leagues, live video broadcasts & co-working platforms",
+    "summary": "Engineered dynamic real-time web applications featuring interactive live video broadcasting, third-party sports league feed ingestions, user feeds, and workspace reservation engines.",
+    "featuredProjects": [
+      {
+        "name": "Real-Time Multi-League Sports Prediction & Betting Platform",
+        "company": "Spaculus Software PVT. LTD",
+        "duration": "2 Years",
+        "role": "Lead Developer",
+        "description": "Interactive sports prediction and betting platform supporting 7 major sports leagues, featuring custom league creation, friend invitation links, and live score synchronization.",
+        "technologies": ["PHP CodeIgniter", "MySQL", "jQuery", "REST API", "SOAP"],
+        "integrations": ["Third-Party Sports Data Feed APIs", "Betting Ledger Engine"],
+        "highlights": [
+          "Built NHL (National Hockey League) game modules with real-time player and team roster selection",
+          "Automated bet settlement and league standings calculation based on live incoming API sports data"
+        ]
+      },
+      {
+        "name": "Live Video Streaming & Community Marketing Platform",
+        "company": "Spaculus Software PVT. LTD",
+        "duration": "6 Months",
+        "role": "Web Developer",
+        "description": "Interactive social networking portals featuring live video streaming, social wall posts, user connections, business marketing directories, and paid event ticketing.",
+        "technologies": ["PHP CodeIgniter", "MySQL", "jQuery", "Web Services", "SOAP"],
+        "integrations": ["Live Video Broadcasting Stream", "PayPal REST API", "Business Directory Engine"],
+        "highlights": [
+          "Integrated live video streaming capability allowing users to broadcast and interact in real-time",
+          "Developed premium business listing tiers and event ticketing with PayPal REST payment processing"
+        ]
+      },
+      {
+        "name": "Smart Co-Working Space Booking & Digital Wallet System",
+        "company": "Luregalore",
+        "duration": "5 Months",
+        "role": "Web Developer",
+        "description": "Co-working desk, private cabin, and conference room booking platform with integrated wallet credits and instant reservation scheduling.",
+        "technologies": ["PHP CodeIgniter", "MySQL", "jQuery", "REST API"],
+        "integrations": ["Razorpay Payment Gateway", "Digital In-App Wallet Engine"],
+        "highlights": [
+          "Built real-time seat availability calendar and reservation conflict prevention engine",
+          "Implemented internal digital wallet mechanism for corporate prepaid booking credits"
+        ]
+      }
+    ]
+  }
+]

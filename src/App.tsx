@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import type { ExperienceEntry, Profile, SkillMatrix } from "./types";
+import type { DomainSection, ExperienceEntry, Profile, ProjectItem, SkillMatrix } from "./types";
 import { usePortfolioData } from "./usePortfolioData";
 
 /* ------------------------------------------------------------------ */
@@ -22,6 +22,7 @@ function AmbientBackground() {
 /* ------------------------------------------------------------------ */
 
 const NAV_LINKS = [
+  { href: "#portfolio", label: "Portfolio & Domains" },
   { href: "#stack", label: "Stack" },
   { href: "#timeline", label: "Timeline" },
   { href: "#contact", label: "Contact" },
@@ -141,6 +142,168 @@ function Hero({ profile }: { profile: Profile }) {
           </p>
         </div>
       </div>
+    </section>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/*  Domain-Driven Portfolio Section                                    */
+/* ------------------------------------------------------------------ */
+
+function ProjectCard({ project }: { project: ProjectItem }) {
+  return (
+    <div className="group flex flex-col justify-between rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition-all hover:-translate-y-1 hover:border-sky-400/40 hover:bg-white/[0.05] hover:shadow-xl hover:shadow-sky-950/40">
+      <div>
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <h4 className="font-display text-lg font-semibold text-slate-100 transition-colors group-hover:text-sky-300">
+            {project.name}
+          </h4>
+          {project.duration && (
+            <span className="rounded-full border border-sky-400/30 bg-sky-400/10 px-2.5 py-0.5 font-mono text-[11px] text-sky-300">
+              {project.duration}
+            </span>
+          )}
+        </div>
+
+        {(project.company || project.role) && (
+          <p className="mt-1 font-mono text-xs text-slate-400">
+            {project.role}
+            {project.company && project.role && <span className="text-slate-600"> · </span>}
+            {project.company && <span className="text-slate-300">{project.company}</span>}
+          </p>
+        )}
+
+        <p className="mt-4 text-sm leading-relaxed text-slate-300">{project.description}</p>
+
+        {project.highlights && project.highlights.length > 0 && (
+          <div className="mt-4 space-y-2 border-t border-white/5 pt-3">
+            {project.highlights.map((highlight, idx) => (
+              <div key={idx} className="flex gap-2.5 text-xs text-slate-400">
+                <span className="mt-1.5 h-1 w-1 flex-none rounded-full bg-sky-400" />
+                <span>{highlight}</span>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+
+      <div className="mt-6 space-y-3 border-t border-white/5 pt-4">
+        {project.integrations && project.integrations.length > 0 && (
+          <div>
+            <span className="font-mono text-[10px] uppercase tracking-wider text-emerald-400">
+              APIs &amp; Integrations:
+            </span>
+            <div className="mt-1.5 flex flex-wrap gap-1.5">
+              {project.integrations.map((item) => (
+                <span
+                  key={item}
+                  className="rounded-md border border-emerald-400/20 bg-emerald-400/5 px-2 py-0.5 font-mono text-[11px] text-emerald-300"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <div>
+          <span className="font-mono text-[10px] uppercase tracking-wider text-indigo-300">
+            Tech Stack:
+          </span>
+          <div className="mt-1.5 flex flex-wrap gap-1.5">
+            {project.technologies.map((tech) => (
+              <span
+                key={tech}
+                className="rounded-md border border-white/10 bg-white/5 px-2 py-0.5 font-mono text-[11px] text-slate-300"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function PortfolioSection({ portfolioProjects }: { portfolioProjects: DomainSection[] }) {
+  const [activeDomainId, setActiveDomainId] = useState<string>(portfolioProjects[0]?.id ?? "");
+
+  const activeDomain = useMemo(() => {
+    return portfolioProjects.find((d) => d.id === activeDomainId) ?? portfolioProjects[0];
+  }, [portfolioProjects, activeDomainId]);
+
+  if (!portfolioProjects || portfolioProjects.length === 0) return null;
+
+  return (
+    <section id="portfolio" className="mx-auto max-w-6xl px-6 py-20">
+      <div className="mb-10">
+        <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-sky-400">
+          Domain Experience &amp; Projects
+        </p>
+        <h2 className="mt-2 font-display text-2xl font-semibold text-slate-100 sm:text-3xl">
+          Systems Engineered Across Industries
+        </h2>
+        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate-400">
+          Over 14 years of architecting scalable applications across high-compliance fintech, regulated logistics, automotive platforms, e-commerce ecosystems, and high-concurrency real-time apps.
+        </p>
+      </div>
+
+      {/* Domain Navigation Tabs */}
+      <div
+        role="tablist"
+        aria-label="Portfolio domain tabs"
+        className="mb-8 flex flex-wrap gap-2 border-b border-white/5 pb-4"
+      >
+        {portfolioProjects.map((domain) => {
+          const isActive = domain.id === activeDomainId;
+          return (
+            <button
+              key={domain.id}
+              role="tab"
+              aria-selected={isActive}
+              onClick={() => setActiveDomainId(domain.id)}
+              className={`rounded-full px-4 py-2 font-mono text-xs transition-all ${
+                isActive
+                  ? "border border-sky-400/50 bg-sky-400/10 text-sky-300 shadow-glow"
+                  : "border border-white/10 text-slate-400 hover:border-white/20 hover:text-slate-200"
+              }`}
+            >
+              {domain.domain}
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Active Domain Overview Banner */}
+      {activeDomain && (
+        <div className="animate-fade-up">
+          <div className="mb-8 rounded-2xl border border-indigo-400/20 bg-indigo-500/[0.04] p-6 backdrop-blur-md sm:p-8">
+            <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <span className="font-mono text-xs uppercase tracking-widest text-indigo-400">
+                  Domain Specialization
+                </span>
+                <h3 className="mt-1 font-display text-xl font-bold text-slate-100 sm:text-2xl">
+                  {activeDomain.domain}
+                </h3>
+              </div>
+              <span className="inline-flex self-start rounded-full border border-sky-400/30 bg-sky-400/10 px-3 py-1 font-mono text-xs text-sky-300">
+                {activeDomain.featuredProjects.length} Key Initiative{activeDomain.featuredProjects.length > 1 ? "s" : ""}
+              </span>
+            </div>
+            <p className="mt-3 font-mono text-xs font-medium text-sky-300">{activeDomain.tagline}</p>
+            <p className="mt-2 text-sm leading-relaxed text-slate-300">{activeDomain.summary}</p>
+          </div>
+
+          {/* Project Cards Grid */}
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            {activeDomain.featuredProjects.map((project, idx) => (
+              <ProjectCard key={`${project.name}-${idx}`} project={project} />
+            ))}
+          </div>
+        </div>
+      )}
     </section>
   );
 }
@@ -314,7 +477,10 @@ function CenteredMessage({ children }: { children: React.ReactNode }) {
 export default function App() {
   const { data, loading, error } = usePortfolioData();
 
-  if (loading) return <CenteredMessage>loading profile.json, skills.json, experience.json…</CenteredMessage>;
+  if (loading)
+    return (
+      <CenteredMessage>loading profile.json, skills.json, experience.json, portfolio.json…</CenteredMessage>
+    );
   if (error || !data)
     return (
       <CenteredMessage>
@@ -329,6 +495,7 @@ export default function App() {
         <Header profile={data.profile} />
         <main>
           <Hero profile={data.profile} />
+          <PortfolioSection portfolioProjects={data.portfolioProjects} />
           <SkillsMatrix skills={data.skills} />
           <ExperienceTimeline experience={data.experience} />
         </main>
