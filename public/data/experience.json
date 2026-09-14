@@ -1,0 +1,26 @@
+[
+  {
+    "role": "Senior Full-Stack Engineer / Technical Lead",
+    "company": "Augmont Goldtech Private Limited",
+    "location": "Mumbai, India (Remote)",
+    "period": "Recent – Present",
+    "bullets": [
+      "Lead full-stack engineering strategies for 'Digi Gold', India's premier digital gold & silver investment platform serving millions of transactions.",
+      "Architect, build, and optimize scalable web microservices and applications using AngularJS, Node.js, and PHP Laravel.",
+      "Implement high-security transaction mechanisms, live bullion market price feeds, automatic accumulation workflows, and secure digital vault wallet operations.",
+      "Optimize database queries and transactional endpoints to support rapid buy, sell, and systematic investment plan (SIP) features."
+    ]
+  },
+  {
+    "role": "Sr. Software Developer / Team Leader",
+    "company": "Atyantik Technologies Pvt. Ltd.",
+    "location": "Vadodara, India",
+    "period": "Dec 2020 – Previous",
+    "bullets": [
+      "Led, mentored, and guided a high-performing team of 6 engineers across product and service-based development cycles.",
+      "Architected and optimized complex systems using React JS, TypeScript, Laravel, MySQL, and WordPress.",
+      "Key Project – Inventory Management Platform: Architected a compliant delivery management system for the cannabis industry. Built a white-label e-commerce mobile app, integrated React PWA, and optimized data search with Elasticsearch.",
+      "Key Project – Automotive Dealer IMS: Engineered scalable digital marketing and website infrastructure using Recoil, SCSS, and Node.js to enhance discoverability and system efficiency."
+    ]
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "Frontend Technologies": ["AngularJS", "React JS", "TypeScript", "Redux", "Recoil", "React Native", "PWA (Context API)", "JavaScript", "HTML5", "CSS3", "SCSS", "Tailwind CSS", "Livewire"],
+  "Backend Ecosystems": ["PHP", "Laravel", "Node.js", "CodeIgniter", "RESTful APIs", "SOAP Web Services", "WordPress"],
+  "Databases & Search": ["MySQL", "PostgreSQL", "Elasticsearch", "SQL Server", "Oracle 9i"],
+  "Cloud & DevOps": ["AWS (EC2, S3, RDS, IAM)", "Git", "Nginx"]
+}
